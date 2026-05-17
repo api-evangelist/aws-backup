@@ -56,7 +56,7 @@ common:
     url: https://docs.aws.amazon.com/aws-backup/
   - type: Pricing
     url: https://aws.amazon.com/backup/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://portal.aws.amazon.com/billing/signup
 maintainers:
   - FN: Kin Lane
