@@ -1,0 +1,329 @@
+openapi: 3.1.0
+info:
+  title: AWS Backup API
+  version: '2018-11-15'
+  description: |
+    AWS Backup is a fully managed, policy-based data protection service that
+    centralizes and automates backup of data across AWS services. The AWS
+    Backup API exposes REST operations for managing backup plans, backup
+    selections, backup vaults, recovery points, restore jobs, and audit
+    frameworks. All requests are signed with AWS Signature Version 4 (SigV4).
+
+    See https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+    for the full reference.
+  contact:
+    name: AWS Backup Documentation
+    url: https://docs.aws.amazon.com/aws-backup/
+servers:
+  - url: https://backup.{region}.amazonaws.com
+    description: AWS Backup regional endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+tags:
+  - name: Backup Plans
+  - name: Backup Selections
+  - name: Backup Vaults
+  - name: Recovery Points
+  - name: Backup Jobs
+  - name: Copy Jobs
+  - name: Restore Jobs
+  - name: Frameworks
+  - name: Report Plans
+  - name: Tags
+security:
+  - SigV4: []
+paths:
+  /backup/plans:
+    get:
+      tags: [Backup Plans]
+      summary: List backup plans
+      operationId: ListBackupPlans
+      parameters:
+        - $ref: '#/components/parameters/MaxResults'
+        - $ref: '#/components/parameters/NextToken'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    post:
+      tags: [Backup Plans]
+      summary: Create a backup plan
+      operationId: CreateBackupPlan
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup/plans/{backupPlanId}:
+    get:
+      tags: [Backup Plans]
+      summary: Get a backup plan
+      operationId: GetBackupPlan
+      parameters:
+        - $ref: '#/components/parameters/BackupPlanId'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    post:
+      tags: [Backup Plans]
+      summary: Update a backup plan
+      operationId: UpdateBackupPlan
+      parameters:
+        - $ref: '#/components/parameters/BackupPlanId'
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    delete:
+      tags: [Backup Plans]
+      summary: Delete a backup plan
+      operationId: DeleteBackupPlan
+      parameters:
+        - $ref: '#/components/parameters/BackupPlanId'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup/plans/{backupPlanId}/selections:
+    get:
+      tags: [Backup Selections]
+      summary: List backup selections
+      operationId: ListBackupSelections
+      parameters:
+        - $ref: '#/components/parameters/BackupPlanId'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    put:
+      tags: [Backup Selections]
+      summary: Create a backup selection
+      operationId: CreateBackupSelection
+      parameters:
+        - $ref: '#/components/parameters/BackupPlanId'
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup-vaults:
+    get:
+      tags: [Backup Vaults]
+      summary: List backup vaults
+      operationId: ListBackupVaults
+      parameters:
+        - $ref: '#/components/parameters/MaxResults'
+        - $ref: '#/components/parameters/NextToken'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup-vaults/{backupVaultName}:
+    put:
+      tags: [Backup Vaults]
+      summary: Create a backup vault
+      operationId: CreateBackupVault
+      parameters:
+        - $ref: '#/components/parameters/BackupVaultName'
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    get:
+      tags: [Backup Vaults]
+      summary: Describe a backup vault
+      operationId: DescribeBackupVault
+      parameters:
+        - $ref: '#/components/parameters/BackupVaultName'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    delete:
+      tags: [Backup Vaults]
+      summary: Delete a backup vault
+      operationId: DeleteBackupVault
+      parameters:
+        - $ref: '#/components/parameters/BackupVaultName'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup-vaults/{backupVaultName}/recovery-points:
+    get:
+      tags: [Recovery Points]
+      summary: List recovery points in a vault
+      operationId: ListRecoveryPointsByBackupVault
+      parameters:
+        - $ref: '#/components/parameters/BackupVaultName'
+        - $ref: '#/components/parameters/MaxResults'
+        - $ref: '#/components/parameters/NextToken'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup-vaults/{backupVaultName}/recovery-points/{recoveryPointArn}:
+    get:
+      tags: [Recovery Points]
+      summary: Describe a recovery point
+      operationId: DescribeRecoveryPoint
+      parameters:
+        - $ref: '#/components/parameters/BackupVaultName'
+        - $ref: '#/components/parameters/RecoveryPointArn'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    delete:
+      tags: [Recovery Points]
+      summary: Delete a recovery point
+      operationId: DeleteRecoveryPoint
+      parameters:
+        - $ref: '#/components/parameters/BackupVaultName'
+        - $ref: '#/components/parameters/RecoveryPointArn'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup-jobs:
+    get:
+      tags: [Backup Jobs]
+      summary: List backup jobs
+      operationId: ListBackupJobs
+      parameters:
+        - $ref: '#/components/parameters/MaxResults'
+        - $ref: '#/components/parameters/NextToken'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    put:
+      tags: [Backup Jobs]
+      summary: Start a backup job
+      operationId: StartBackupJob
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /backup-jobs/{backupJobId}:
+    get:
+      tags: [Backup Jobs]
+      summary: Describe a backup job
+      operationId: DescribeBackupJob
+      parameters:
+        - $ref: '#/components/parameters/BackupJobId'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    post:
+      tags: [Backup Jobs]
+      summary: Stop a backup job
+      operationId: StopBackupJob
+      parameters:
+        - $ref: '#/components/parameters/BackupJobId'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /copy-jobs:
+    get:
+      tags: [Copy Jobs]
+      summary: List copy jobs
+      operationId: ListCopyJobs
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    put:
+      tags: [Copy Jobs]
+      summary: Start a copy job
+      operationId: StartCopyJob
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /restore-jobs:
+    get:
+      tags: [Restore Jobs]
+      summary: List restore jobs
+      operationId: ListRestoreJobs
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    put:
+      tags: [Restore Jobs]
+      summary: Start a restore job
+      operationId: StartRestoreJob
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /audit/frameworks:
+    get:
+      tags: [Frameworks]
+      summary: List audit frameworks
+      operationId: ListFrameworks
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    post:
+      tags: [Frameworks]
+      summary: Create a framework
+      operationId: CreateFramework
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /audit/report-plans:
+    get:
+      tags: [Report Plans]
+      summary: List report plans
+      operationId: ListReportPlans
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    post:
+      tags: [Report Plans]
+      summary: Create a report plan
+      operationId: CreateReportPlan
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+  /tags/{resourceArn}:
+    get:
+      tags: [Tags]
+      summary: List tags on a resource
+      operationId: ListTags
+      parameters:
+        - $ref: '#/components/parameters/ResourceArn'
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+    post:
+      tags: [Tags]
+      summary: Tag a resource
+      operationId: TagResource
+      parameters:
+        - $ref: '#/components/parameters/ResourceArn'
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses:
+        '200': { $ref: '#/components/responses/OK' }
+components:
+  parameters:
+    MaxResults:
+      name: maxResults
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 1000 }
+    NextToken:
+      name: nextToken
+      in: query
+      schema: { type: string }
+    BackupPlanId:
+      name: backupPlanId
+      in: path
+      required: true
+      schema: { type: string }
+    BackupVaultName:
+      name: backupVaultName
+      in: path
+      required: true
+      schema: { type: string }
+    RecoveryPointArn:
+      name: recoveryPointArn
+      in: path
+      required: true
+      schema: { type: string }
+    BackupJobId:
+      name: backupJobId
+      in: path
+      required: true
+      schema: { type: string }
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema: { type: string }
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header
