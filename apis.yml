@@ -50,6 +50,14 @@ apis:
         url: https://docs.aws.amazon.com/general/latest/gr/backup.html
 
 common:
+  - type: TrustCenter
+    url: security/aws-backup-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/aws-backup-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/aws-backup-domain-security.yml
+  - type: Authentication
+    url: authentication/aws-backup-authentication.yml
   - type: Website
     url: https://aws.amazon.com/backup/
   - type: Documentation
