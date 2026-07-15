@@ -50,6 +50,8 @@ apis:
         url: https://docs.aws.amazon.com/general/latest/gr/backup.html
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/aws-backup-agentic-access.yml
   - type: TrustCenter
     url: security/aws-backup-trust-center.yml
   - type: VulnerabilityDisclosure
