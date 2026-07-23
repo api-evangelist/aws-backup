@@ -1,0 +1,132 @@
+openapi: 3.1.0
+info:
+  title: AWS Backup Backup Jobs Backup Plans API
+  version: '2018-11-15'
+  description: 'AWS Backup is a fully managed, policy-based data protection service that
+
+    centralizes and automates backup of data across AWS services. The AWS
+
+    Backup API exposes REST operations for managing backup plans, backup
+
+    selections, backup vaults, recovery points, restore jobs, and audit
+
+    frameworks. All requests are signed with AWS Signature Version 4 (SigV4).
+
+
+    See https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+
+    for the full reference.
+
+    '
+  contact:
+    name: AWS Backup Documentation
+    url: https://docs.aws.amazon.com/aws-backup/
+servers:
+- url: https://backup.{region}.amazonaws.com
+  description: AWS Backup regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- SigV4: []
+tags:
+- name: Backup Plans
+paths:
+  /backup/plans:
+    get:
+      tags:
+      - Backup Plans
+      summary: List backup plans
+      operationId: ListBackupPlans
+      parameters:
+      - $ref: '#/components/parameters/MaxResults'
+      - $ref: '#/components/parameters/NextToken'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    post:
+      tags:
+      - Backup Plans
+      summary: Create a backup plan
+      operationId: CreateBackupPlan
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+  /backup/plans/{backupPlanId}:
+    get:
+      tags:
+      - Backup Plans
+      summary: Get a backup plan
+      operationId: GetBackupPlan
+      parameters:
+      - $ref: '#/components/parameters/BackupPlanId'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    post:
+      tags:
+      - Backup Plans
+      summary: Update a backup plan
+      operationId: UpdateBackupPlan
+      parameters:
+      - $ref: '#/components/parameters/BackupPlanId'
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    delete:
+      tags:
+      - Backup Plans
+      summary: Delete a backup plan
+      operationId: DeleteBackupPlan
+      parameters:
+      - $ref: '#/components/parameters/BackupPlanId'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+components:
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    BackupPlanId:
+      name: backupPlanId
+      in: path
+      required: true
+      schema:
+        type: string
+    NextToken:
+      name: nextToken
+      in: query
+      schema:
+        type: string
+    MaxResults:
+      name: maxResults
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 1000
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header
