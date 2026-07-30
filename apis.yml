@@ -10,7 +10,19 @@ description: >-
   cross-account, cross-Region copies, authenticated with AWS Signature
   Version 4 (SigV4).
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-backup.png
 tags:
   - Backup
   - Data Protection
@@ -24,31 +36,128 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: aws-backup:api
-    name: AWS Backup API
-    description: >-
-      REST API for centrally configuring and managing AWS Backup including
-      backup plans, backup selections, backup vaults, recovery points,
-      restore jobs, framework reports, audit reports, and the AWS Backup
-      gateway for on-premises virtual machines. All requests are signed
-      with AWS Signature Version 4 (SigV4).
-    humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
-    baseURL: https://backup.us-east-1.amazonaws.com
-    tags:
-      - Backup
-      - Data Protection
-      - Disaster Recovery
-      - AWS
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
-      - type: Actions
-        url: https://docs.aws.amazon.com/aws-backup/latest/devguide/API_Operations.html
-      - type: Authentication
-        url: https://docs.aws.amazon.com/aws-backup/latest/devguide/authentication.html
-      - type: Endpoints
-        url: https://docs.aws.amazon.com/general/latest/gr/backup.html
-
+- aid: aws-backup:api
+  name: AWS Backup API
+  description: >-
+    REST API for centrally configuring and managing AWS Backup including backup plans, backup selections,
+    backup vaults, recovery points, restore jobs, framework reports, audit reports, and the AWS Backup
+    gateway for on-premises virtual machines. All requests are signed with AWS Signature Version 4 (SigV4).
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Backup
+  - Data Protection
+  - Disaster Recovery
+  - AWS
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  - type: Actions
+    url: https://docs.aws.amazon.com/aws-backup/latest/devguide/API_Operations.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/aws-backup/latest/devguide/authentication.html
+  - type: Endpoints
+    url: https://docs.aws.amazon.com/general/latest/gr/backup.html
+- aid: aws-backup:aws-backup-backup-jobs-api
+  name: AWS Backup Backup Jobs API
+  description: The Backup Jobs API from AWS Backup — 2 operation(s) for backup jobs.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Backup Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-backup-jobs-api-openapi.yml
+- aid: aws-backup:aws-backup-backup-plans-api
+  name: AWS Backup Backup Plans API
+  description: The Backup Plans API from AWS Backup — 2 operation(s) for backup plans.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Backup Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-backup-plans-api-openapi.yml
+- aid: aws-backup:aws-backup-backup-selections-api
+  name: AWS Backup Backup Selections API
+  description: The Backup Selections API from AWS Backup — 1 operation(s) for backup selections.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Backup Selections
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-backup-selections-api-openapi.yml
+- aid: aws-backup:aws-backup-backup-vaults-api
+  name: AWS Backup Backup Vaults API
+  description: The Backup Vaults API from AWS Backup — 2 operation(s) for backup vaults.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Backup Vaults
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-backup-vaults-api-openapi.yml
+- aid: aws-backup:aws-backup-copy-jobs-api
+  name: AWS Backup Copy Jobs API
+  description: The Copy Jobs API from AWS Backup — 1 operation(s) for copy jobs.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Copy Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-copy-jobs-api-openapi.yml
+- aid: aws-backup:aws-backup-frameworks-api
+  name: AWS Backup Frameworks API
+  description: The Frameworks API from AWS Backup — 1 operation(s) for frameworks.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Frameworks
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-frameworks-api-openapi.yml
+- aid: aws-backup:aws-backup-recovery-points-api
+  name: AWS Backup Recovery Points API
+  description: The Recovery Points API from AWS Backup — 2 operation(s) for recovery points.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Recovery Points
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-recovery-points-api-openapi.yml
+- aid: aws-backup:aws-backup-report-plans-api
+  name: AWS Backup Report Plans API
+  description: The Report Plans API from AWS Backup — 1 operation(s) for report plans.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Report Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-report-plans-api-openapi.yml
+- aid: aws-backup:aws-backup-restore-jobs-api
+  name: AWS Backup Restore Jobs API
+  description: The Restore Jobs API from AWS Backup — 1 operation(s) for restore jobs.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Restore Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-restore-jobs-api-openapi.yml
+- aid: aws-backup:aws-backup-tags-api
+  name: AWS Backup Tags API
+  description: The Tags API from AWS Backup — 1 operation(s) for tags.
+  humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
+  baseURL: https://backup.us-east-1.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-backup-tags-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/aws-backup-agentic-access.yml
