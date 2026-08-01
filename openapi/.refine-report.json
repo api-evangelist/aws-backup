@@ -1,0 +1,32 @@
+{
+  "provider": "aws-backup",
+  "sources": [
+    "aws-backup-backup-jobs-api-openapi.yml",
+    "aws-backup-backup-plans-api-openapi.yml",
+    "aws-backup-backup-selections-api-openapi.yml",
+    "aws-backup-backup-vaults-api-openapi.yml",
+    "aws-backup-copy-jobs-api-openapi.yml",
+    "aws-backup-frameworks-api-openapi.yml",
+    "aws-backup-recovery-points-api-openapi.yml",
+    "aws-backup-report-plans-api-openapi.yml",
+    "aws-backup-restore-jobs-api-openapi.yml",
+    "aws-backup-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "aws-backup-backup-jobs-api-openapi.yml",
+    "aws-backup-backup-plans-api-openapi.yml",
+    "aws-backup-backup-selections-api-openapi.yml",
+    "aws-backup-backup-vaults-api-openapi.yml",
+    "aws-backup-copy-jobs-api-openapi.yml",
+    "aws-backup-frameworks-api-openapi.yml",
+    "aws-backup-recovery-points-api-openapi.yml",
+    "aws-backup-report-plans-api-openapi.yml",
+    "aws-backup-restore-jobs-api-openapi.yml",
+    "aws-backup-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
