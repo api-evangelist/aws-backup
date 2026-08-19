@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Backup Backup Jobs Report Plans API",
+    "version": "2018-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Report Plans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List report plans",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/audit/report-plans"
+          },
+          "docs": "List report plans"
+        },
+        {
+          "info": {
+            "name": "Create a report plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backup.{region}.amazonaws.com/audit/report-plans",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a report plan"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

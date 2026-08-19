@@ -1,0 +1,281 @@
+{
+  "item": [
+    {
+      "id": "a0420029-b52e-473b-bc5d-b7a8f8e3b908",
+      "name": "Tags",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "008cc395-7e1a-4d01-ad06-a95e52035510",
+          "name": "List tags on a resource",
+          "request": {
+            "name": "List tags on a resource",
+            "description": {},
+            "url": {
+              "path": [
+                "tags",
+                ":resourceArn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceArn",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b047b526-68f7-49b8-b131-e6d786d15b1b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 2661,\n  \"key_1\": 6454\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "20d2b5bd-cb90-4788-9fdd-c4ba80636b32",
+          "name": "Tag a resource",
+          "request": {
+            "name": "Tag a resource",
+            "description": {},
+            "url": {
+              "path": [
+                "tags",
+                ":resourceArn"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceArn",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 2480\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a46c49b8-cbfc-42ee-a03a-f473c9cca2e9",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags",
+                    ":resourceArn"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceArn",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 2661,\n  \"key_1\": 6454\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://backup.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5070d5a8-6fe8-430d-977b-cb9ce993e0e4",
+    "name": "AWS Backup Backup Jobs Tags API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Backup is a fully managed, policy-based data protection service that\ncentralizes and automates backup of data across AWS services. The AWS\nBackup API exposes REST operations for managing backup plans, backup\nselections, backup vaults, recovery points, restore jobs, and audit\nframeworks. All requests are signed with AWS Signature Version 4 (SigV4).\n\nSee https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html\nfor the full reference.\n\n\nContact Support:\n Name: AWS Backup Documentation",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Backup Backup Jobs API",
+    "version": "2018-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Backup Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List backup jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/backup-jobs",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List backup jobs"
+        },
+        {
+          "info": {
+            "name": "Start a backup job",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backup.{region}.amazonaws.com/backup-jobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a backup job"
+        },
+        {
+          "info": {
+            "name": "Describe a backup job",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/backup-jobs/:backupJobId",
+            "params": [
+              {
+                "name": "backupJobId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describe a backup job"
+        },
+        {
+          "info": {
+            "name": "Stop a backup job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backup.{region}.amazonaws.com/backup-jobs/:backupJobId",
+            "params": [
+              {
+                "name": "backupJobId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Stop a backup job"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,253 @@
+{
+  "item": [
+    {
+      "id": "0a5ad6de-549a-4795-a1d3-3ee76bcb38cc",
+      "name": "Frameworks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9fe4b627-17d9-481e-bd75-6f51bbc8ef14",
+          "name": "List audit frameworks",
+          "request": {
+            "name": "List audit frameworks",
+            "description": {},
+            "url": {
+              "path": [
+                "audit",
+                "frameworks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cfa98105-40b8-43aa-a1ef-474ce68de58e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "audit",
+                    "frameworks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 1930\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "186bc85c-ba9b-404e-8d16-6a3277a38c07",
+          "name": "Create a framework",
+          "request": {
+            "name": "Create a framework",
+            "description": {},
+            "url": {
+              "path": [
+                "audit",
+                "frameworks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9733b6c6-83c7-4394-b4c5-b937b7621b67",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "audit",
+                    "frameworks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 1930\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://backup.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5eb7b997-ff07-4f07-813e-b94cadce78c0",
+    "name": "AWS Backup Backup Jobs Frameworks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Backup is a fully managed, policy-based data protection service that\ncentralizes and automates backup of data across AWS services. The AWS\nBackup API exposes REST operations for managing backup plans, backup\nselections, backup vaults, recovery points, restore jobs, and audit\nframeworks. All requests are signed with AWS Signature Version 4 (SigV4).\n\nSee https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html\nfor the full reference.\n\n\nContact Support:\n Name: AWS Backup Documentation",
+      "type": "text/plain"
+    }
+  }
+}

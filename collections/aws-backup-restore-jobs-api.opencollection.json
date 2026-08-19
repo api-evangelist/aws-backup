@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Backup Backup Jobs Restore Jobs API",
+    "version": "2018-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Restore Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List restore jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/restore-jobs"
+          },
+          "docs": "List restore jobs"
+        },
+        {
+          "info": {
+            "name": "Start a restore job",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backup.{region}.amazonaws.com/restore-jobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a restore job"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

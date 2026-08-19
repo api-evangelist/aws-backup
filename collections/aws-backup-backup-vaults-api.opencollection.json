@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Backup Backup Jobs Backup Vaults API",
+    "version": "2018-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Backup Vaults",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List backup vaults",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/backup-vaults",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List backup vaults"
+        },
+        {
+          "info": {
+            "name": "Describe a backup vault",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/backup-vaults/:backupVaultName",
+            "params": [
+              {
+                "name": "backupVaultName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describe a backup vault"
+        },
+        {
+          "info": {
+            "name": "Create a backup vault",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backup.{region}.amazonaws.com/backup-vaults/:backupVaultName",
+            "params": [
+              {
+                "name": "backupVaultName",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a backup vault"
+        },
+        {
+          "info": {
+            "name": "Delete a backup vault",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://backup.{region}.amazonaws.com/backup-vaults/:backupVaultName",
+            "params": [
+              {
+                "name": "backupVaultName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a backup vault"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

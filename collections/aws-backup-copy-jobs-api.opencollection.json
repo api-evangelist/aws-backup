@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Backup Backup Jobs Copy Jobs API",
+    "version": "2018-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Copy Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List copy jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/copy-jobs"
+          },
+          "docs": "List copy jobs"
+        },
+        {
+          "info": {
+            "name": "Start a copy job",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backup.{region}.amazonaws.com/copy-jobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start a copy job"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

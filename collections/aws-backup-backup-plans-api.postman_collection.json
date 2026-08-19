@@ -1,0 +1,607 @@
+{
+  "item": [
+    {
+      "id": "04dbe182-9f51-4c09-b6da-ba6944c4efa5",
+      "name": "Backup Plans",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c7cff56e-4742-4894-9c6b-2fda5594d2c2",
+          "name": "List backup plans",
+          "request": {
+            "name": "List backup plans",
+            "description": {},
+            "url": {
+              "path": [
+                "backup",
+                "plans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "68ccdf62-9526-4f49-90e2-cc70fcb1d3ce",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "backup",
+                    "plans"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9192.76907475588,\n  \"key_1\": 1361\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69383226-e08f-44e0-8476-1a7f5b696310",
+          "name": "Create a backup plan",
+          "request": {
+            "name": "Create a backup plan",
+            "description": {},
+            "url": {
+              "path": [
+                "backup",
+                "plans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 160,\n  \"key_1\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d25f7240-b9dc-4440-bd14-afff1e560fba",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "backup",
+                    "plans"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9192.76907475588,\n  \"key_1\": 1361\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69b5872d-8809-44dc-b219-2dd48f566e07",
+          "name": "Get a backup plan",
+          "request": {
+            "name": "Get a backup plan",
+            "description": {},
+            "url": {
+              "path": [
+                "backup",
+                "plans",
+                ":backupPlanId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "backupPlanId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fdc3de68-6140-4dac-aad9-957af37694a8",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "backup",
+                    "plans",
+                    ":backupPlanId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "backupPlanId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9192.76907475588,\n  \"key_1\": 1361\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ff46b898-8f9d-44af-9fc0-a446ae00afb0",
+          "name": "Update a backup plan",
+          "request": {
+            "name": "Update a backup plan",
+            "description": {},
+            "url": {
+              "path": [
+                "backup",
+                "plans",
+                ":backupPlanId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "backupPlanId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 160,\n  \"key_1\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d79ee710-967a-40ed-90d5-04dde1035484",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "backup",
+                    "plans",
+                    ":backupPlanId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "backupPlanId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9192.76907475588,\n  \"key_1\": 1361\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "abd40fde-06ba-4891-a5fd-ee68b060fdad",
+          "name": "Delete a backup plan",
+          "request": {
+            "name": "Delete a backup plan",
+            "description": {},
+            "url": {
+              "path": [
+                "backup",
+                "plans",
+                ":backupPlanId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "backupPlanId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aeb666da-38f9-4e3e-974a-8a5b86ff2b7f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "backup",
+                    "plans",
+                    ":backupPlanId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "backupPlanId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9192.76907475588,\n  \"key_1\": 1361\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://backup.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "64d1d982-a56f-4c8c-9706-d6cbb4d3fa8b",
+    "name": "AWS Backup Backup Jobs Backup Plans API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Backup is a fully managed, policy-based data protection service that\ncentralizes and automates backup of data across AWS services. The AWS\nBackup API exposes REST operations for managing backup plans, backup\nselections, backup vaults, recovery points, restore jobs, and audit\nframeworks. All requests are signed with AWS Signature Version 4 (SigV4).\n\nSee https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html\nfor the full reference.\n\n\nContact Support:\n Name: AWS Backup Documentation",
+      "type": "text/plain"
+    }
+  }
+}

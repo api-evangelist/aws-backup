@@ -1,0 +1,249 @@
+{
+  "item": [
+    {
+      "id": "5ae6d279-a3c5-48e1-a23d-0d2f2c391edb",
+      "name": "Copy Jobs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "34cbc6a6-c787-4c45-a456-eec4cc46b0fe",
+          "name": "List copy jobs",
+          "request": {
+            "name": "List copy jobs",
+            "description": {},
+            "url": {
+              "path": [
+                "copy-jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4821ce45-ad85-48fa-9eef-61f4e833976a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "copy-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 6404.13290302462\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9797de02-9c73-4d76-b17c-d5cf0b4cb55b",
+          "name": "Start a copy job",
+          "request": {
+            "name": "Start a copy job",
+            "description": {},
+            "url": {
+              "path": [
+                "copy-jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 3028.740234438033,\n  \"key_1\": 8554,\n  \"key_2\": 8423\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "835969c8-15f0-4fbd-8181-1edc3b54ddc2",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "copy-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 6404.13290302462\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://backup.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5e1c31fb-fd41-44df-94ea-7b7798e97094",
+    "name": "AWS Backup Backup Jobs Copy Jobs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Backup is a fully managed, policy-based data protection service that\ncentralizes and automates backup of data across AWS services. The AWS\nBackup API exposes REST operations for managing backup plans, backup\nselections, backup vaults, recovery points, restore jobs, and audit\nframeworks. All requests are signed with AWS Signature Version 4 (SigV4).\n\nSee https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html\nfor the full reference.\n\n\nContact Support:\n Name: AWS Backup Documentation",
+      "type": "text/plain"
+    }
+  }
+}

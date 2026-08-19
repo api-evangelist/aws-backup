@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Backup Backup Jobs Backup Selections API",
+    "version": "2018-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Backup Selections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List backup selections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backup.{region}.amazonaws.com/backup/plans/:backupPlanId/selections",
+            "params": [
+              {
+                "name": "backupPlanId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List backup selections"
+        },
+        {
+          "info": {
+            "name": "Create a backup selection",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backup.{region}.amazonaws.com/backup/plans/:backupPlanId/selections",
+            "params": [
+              {
+                "name": "backupPlanId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a backup selection"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
