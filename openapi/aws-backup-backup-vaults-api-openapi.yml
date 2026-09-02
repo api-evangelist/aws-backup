@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: AWS Backup Backup Jobs Backup Vaults API
   version: '2018-11-15'
@@ -87,24 +87,16 @@ components:
           schema:
             type: object
             additionalProperties: true
-  requestBodies:
-    JsonBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
   parameters:
+    NextToken:
+      name: nextToken
+      in: query
+      schema:
+        type: string
     BackupVaultName:
       name: backupVaultName
       in: path
       required: true
-      schema:
-        type: string
-    NextToken:
-      name: nextToken
-      in: query
       schema:
         type: string
     MaxResults:
@@ -114,6 +106,14 @@ components:
         type: integer
         minimum: 1
         maximum: 1000
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   securitySchemes:
     SigV4:
       type: apiKey

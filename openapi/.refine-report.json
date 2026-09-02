@@ -27,6 +27,18 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "aws-backup-backup-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-backup-plans-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-backup-selections-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-backup-vaults-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-copy-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-frameworks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-recovery-points-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-report-plans-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-restore-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-backup-tags-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }
