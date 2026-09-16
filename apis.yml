@@ -1,14 +1,11 @@
 aid: aws-backup
 name: AWS Backup
-description: >-
-  AWS Backup is a fully managed, policy-based data protection service that
-  centralizes and automates backup of data across AWS services including
-  EBS volumes, EC2 instances, RDS databases, DynamoDB tables, EFS file
-  systems, FSx file systems, Storage Gateway volumes, S3, and on-premises
-  data via the AWS Backup gateway. The AWS Backup API allows programmatic
-  management of backup plans, vaults, recovery points, restore jobs, and
-  cross-account, cross-Region copies, authenticated with AWS Signature
-  Version 4 (SigV4).
+description: AWS Backup is a fully managed, policy-based data protection service that centralizes and
+  automates backup of data across AWS services including EBS volumes, EC2 instances, RDS databases, DynamoDB
+  tables, EFS file systems, FSx file systems, Storage Gateway volumes, S3, and on-premises data via the
+  AWS Backup gateway. The AWS Backup API allows programmatic management of backup plans, vaults, recovery
+  points, restore jobs, and cross-account, cross-Region copies, authenticated with AWS Signature Version
+  4 (SigV4).
 type: Index
 deliveryModel:
   model: saas
@@ -37,24 +34,23 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-backup.png
 tags:
-  - Backup
-  - Data Protection
-  - Disaster Recovery
-  - AWS
-  - Managed Service
-  - Compliance
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/aws-backup/refs/heads/main/apis.yml
+- Backup
+- Data Protection
+- Disaster Recovery
+- AWS
+- Managed Service
+- Compliance
+url: https://raw.githubusercontent.com/api-evangelist/aws-backup/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: aws-backup:api
   name: AWS Backup API
-  description: >-
-    REST API for centrally configuring and managing AWS Backup including backup plans, backup selections,
-    backup vaults, recovery points, restore jobs, framework reports, audit reports, and the AWS Backup
-    gateway for on-premises virtual machines. All requests are signed with AWS Signature Version 4 (SigV4).
+  description: REST API for centrally configuring and managing AWS Backup including backup plans, backup
+    selections, backup vaults, recovery points, restore jobs, framework reports, audit reports, and the
+    AWS Backup gateway for on-premises virtual machines. All requests are signed with AWS Signature Version
+    4 (SigV4).
   humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
   baseURL: https://backup.us-east-1.amazonaws.com
   tags:
@@ -72,7 +68,7 @@ apis:
   - type: Endpoints
     url: https://docs.aws.amazon.com/general/latest/gr/backup.html
 - aid: aws-backup:aws-backup-backup-jobs-api
-  name: AWS Backup Backup Jobs API
+  name: AWS Backup Jobs API
   description: The Backup Jobs API from AWS Backup — 2 operation(s) for backup jobs.
   humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
   baseURL: https://backup.us-east-1.amazonaws.com
@@ -82,7 +78,7 @@ apis:
   - type: OpenAPI
     url: openapi/aws-backup-backup-jobs-api-openapi.yml
 - aid: aws-backup:aws-backup-backup-plans-api
-  name: AWS Backup Backup Plans API
+  name: AWS Backup Plans API
   description: The Backup Plans API from AWS Backup — 2 operation(s) for backup plans.
   humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
   baseURL: https://backup.us-east-1.amazonaws.com
@@ -92,7 +88,7 @@ apis:
   - type: OpenAPI
     url: openapi/aws-backup-backup-plans-api-openapi.yml
 - aid: aws-backup:aws-backup-backup-selections-api
-  name: AWS Backup Backup Selections API
+  name: AWS Backup Selections API
   description: The Backup Selections API from AWS Backup — 1 operation(s) for backup selections.
   humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
   baseURL: https://backup.us-east-1.amazonaws.com
@@ -102,7 +98,7 @@ apis:
   - type: OpenAPI
     url: openapi/aws-backup-backup-selections-api-openapi.yml
 - aid: aws-backup:aws-backup-backup-vaults-api
-  name: AWS Backup Backup Vaults API
+  name: AWS Backup Vaults API
   description: The Backup Vaults API from AWS Backup — 2 operation(s) for backup vaults.
   humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
   baseURL: https://backup.us-east-1.amazonaws.com
@@ -172,26 +168,26 @@ apis:
   - type: OpenAPI
     url: openapi/aws-backup-tags-api-openapi.yml
 common:
-  - type: AgenticAccess
-    url: agentic-access/aws-backup-agentic-access.yml
-  - type: TrustCenter
-    url: security/aws-backup-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/aws-backup-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/aws-backup-domain-security.yml
-  - type: Authentication
-    url: authentication/aws-backup-authentication.yml
-  - type: Website
-    url: https://aws.amazon.com/backup/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/aws-backup/
-  - type: Pricing
-    url: https://aws.amazon.com/backup/pricing/
-  - type: Signup
-    url: https://portal.aws.amazon.com/billing/signup
+- type: AgenticAccess
+  url: agentic-access/aws-backup-agentic-access.yml
+- type: TrustCenter
+  url: security/aws-backup-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/aws-backup-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/aws-backup-domain-security.yml
+- type: Authentication
+  url: authentication/aws-backup-authentication.yml
+- type: Website
+  url: https://aws.amazon.com/backup/
+- type: Documentation
+  url: https://docs.aws.amazon.com/aws-backup/
+- type: Pricing
+  url: https://aws.amazon.com/backup/pricing/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: aws
 x-relationship: product
