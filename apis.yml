@@ -123,6 +123,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
   baseURL: https://backup.us-east-1.amazonaws.com
   tags:
+  - Framework
+  tags_raw:
   - Frameworks
   properties:
   - type: OpenAPI
