@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: AWS Backup Backup Jobs Recovery Points API
+  title: AWS Backup Recovery Points API
   version: '2018-11-15'
   description: 'AWS Backup is a fully managed, policy-based data protection service that
 
@@ -15,9 +15,7 @@ info:
 
     See https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
 
-    for the full reference.
-
-    '
+    for the full reference.'
   contact:
     name: AWS Backup Documentation
     url: https://docs.aws.amazon.com/aws-backup/
@@ -70,13 +68,15 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   parameters:
-    RecoveryPointArn:
-      name: recoveryPointArn
-      in: path
-      required: true
-      schema:
-        type: string
     NextToken:
       name: nextToken
       in: query
@@ -95,14 +95,12 @@ components:
         type: integer
         minimum: 1
         maximum: 1000
-  responses:
-    OK:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
+    RecoveryPointArn:
+      name: recoveryPointArn
+      in: path
+      required: true
+      schema:
+        type: string
   securitySchemes:
     SigV4:
       type: apiKey

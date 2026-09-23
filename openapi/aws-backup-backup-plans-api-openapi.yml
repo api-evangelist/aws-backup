@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: AWS Backup Backup Jobs Backup Plans API
+  title: AWS Backup Backup Plans API
   version: '2018-11-15'
   description: 'AWS Backup is a fully managed, policy-based data protection service that
 
@@ -15,9 +15,7 @@ info:
 
     See https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
 
-    for the full reference.
-
-    '
+    for the full reference.'
   contact:
     name: AWS Backup Documentation
     url: https://docs.aws.amazon.com/aws-backup/

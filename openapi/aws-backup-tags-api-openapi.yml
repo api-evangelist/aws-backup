@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: AWS Backup Backup Jobs Tags API
+  title: AWS Backup Tags API
   version: '2018-11-15'
   description: 'AWS Backup is a fully managed, policy-based data protection service that
 
@@ -15,9 +15,7 @@ info:
 
     See https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
 
-    for the full reference.
-
-    '
+    for the full reference.'
   contact:
     name: AWS Backup Documentation
     url: https://docs.aws.amazon.com/aws-backup/
@@ -57,6 +55,13 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
+  parameters:
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema:
+        type: string
   responses:
     OK:
       description: Successful response
@@ -73,13 +78,6 @@ components:
           schema:
             type: object
             additionalProperties: true
-  parameters:
-    ResourceArn:
-      name: resourceArn
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     SigV4:
       type: apiKey

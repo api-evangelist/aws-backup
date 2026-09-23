@@ -1,16 +1,7 @@
 {
   "provider": "aws-backup",
   "sources": [
-    "aws-backup-backup-jobs-api-openapi.yml",
-    "aws-backup-backup-plans-api-openapi.yml",
-    "aws-backup-backup-selections-api-openapi.yml",
-    "aws-backup-backup-vaults-api-openapi.yml",
-    "aws-backup-copy-jobs-api-openapi.yml",
-    "aws-backup-frameworks-api-openapi.yml",
-    "aws-backup-recovery-points-api-openapi.yml",
-    "aws-backup-report-plans-api-openapi.yml",
-    "aws-backup-restore-jobs-api-openapi.yml",
-    "aws-backup-tags-api-openapi.yml"
+    "_original/aws-backup-openapi.yml"
   ],
   "outputs": [
     "aws-backup-backup-jobs-api-openapi.yml",
@@ -28,17 +19,20 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "aws-backup-backup-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-backup-plans-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-backup-selections-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-backup-vaults-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-copy-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-frameworks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-recovery-points-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-report-plans-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-restore-jobs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "aws-backup-tags-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "aws-backup-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "aws-backup-backup-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-backup-plans-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-backup-selections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-backup-vaults-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-copy-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-frameworks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-recovery-points-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-report-plans-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-restore-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-backup-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

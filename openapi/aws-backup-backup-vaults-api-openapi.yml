@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: AWS Backup Backup Jobs Backup Vaults API
+  title: AWS Backup Backup Vaults API
   version: '2018-11-15'
   description: 'AWS Backup is a fully managed, policy-based data protection service that
 
@@ -15,9 +15,7 @@ info:
 
     See https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html
 
-    for the full reference.
-
-    '
+    for the full reference.'
   contact:
     name: AWS Backup Documentation
     url: https://docs.aws.amazon.com/aws-backup/
@@ -88,15 +86,15 @@ components:
             type: object
             additionalProperties: true
   parameters:
-    NextToken:
-      name: nextToken
-      in: query
-      schema:
-        type: string
     BackupVaultName:
       name: backupVaultName
       in: path
       required: true
+      schema:
+        type: string
+    NextToken:
+      name: nextToken
+      in: query
       schema:
         type: string
     MaxResults:
