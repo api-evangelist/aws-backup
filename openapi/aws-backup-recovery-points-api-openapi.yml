@@ -68,22 +68,9 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
-  responses:
-    OK:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
   parameters:
-    NextToken:
-      name: nextToken
-      in: query
-      schema:
-        type: string
-    BackupVaultName:
-      name: backupVaultName
+    RecoveryPointArn:
+      name: recoveryPointArn
       in: path
       required: true
       schema:
@@ -95,12 +82,25 @@ components:
         type: integer
         minimum: 1
         maximum: 1000
-    RecoveryPointArn:
-      name: recoveryPointArn
+    BackupVaultName:
+      name: backupVaultName
       in: path
       required: true
       schema:
         type: string
+    NextToken:
+      name: nextToken
+      in: query
+      schema:
+        type: string
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   securitySchemes:
     SigV4:
       type: apiKey

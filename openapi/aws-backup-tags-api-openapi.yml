@@ -55,13 +55,6 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
-  parameters:
-    ResourceArn:
-      name: resourceArn
-      in: path
-      required: true
-      schema:
-        type: string
   responses:
     OK:
       description: Successful response
@@ -70,6 +63,13 @@ components:
           schema:
             type: object
             additionalProperties: true
+  parameters:
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema:
+        type: string
   requestBodies:
     JsonBody:
       required: true
