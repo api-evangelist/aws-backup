@@ -75,11 +75,18 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
-  parameters:
-    BackupJobId:
-      name: backupJobId
-      in: path
+  requestBodies:
+    JsonBody:
       required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    NextToken:
+      name: nextToken
+      in: query
       schema:
         type: string
     MaxResults:
@@ -89,22 +96,15 @@ components:
         type: integer
         minimum: 1
         maximum: 1000
-    NextToken:
-      name: nextToken
-      in: query
+    BackupJobId:
+      name: backupJobId
+      in: path
+      required: true
       schema:
         type: string
   responses:
     OK:
       description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
-  requestBodies:
-    JsonBody:
-      required: true
       content:
         application/json:
           schema:

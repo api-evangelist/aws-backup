@@ -63,6 +63,13 @@ components:
           schema:
             type: object
             additionalProperties: true
+  parameters:
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema:
+        type: string
   responses:
     OK:
       description: Successful response
@@ -71,13 +78,6 @@ components:
           schema:
             type: object
             additionalProperties: true
-  parameters:
-    ResourceArn:
-      name: resourceArn
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     SigV4:
       type: apiKey

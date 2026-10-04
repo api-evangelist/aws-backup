@@ -55,6 +55,14 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   parameters:
     BackupPlanId:
       name: backupPlanId
@@ -65,14 +73,6 @@ components:
   responses:
     OK:
       description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
-  requestBodies:
-    JsonBody:
-      required: true
       content:
         application/json:
           schema:
