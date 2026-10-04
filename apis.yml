@@ -170,6 +170,9 @@ apis:
   - type: OpenAPI
     url: openapi/aws-backup-tags-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/aws-backup-capability-edges.yml
+  name: AWS Backup Business Capability Map
 - type: AgenticAccess
   url: agentic-access/aws-backup-agentic-access.yml
 - type: TrustCenter
