@@ -69,9 +69,10 @@ paths:
           $ref: '#/components/responses/OK'
 components:
   parameters:
-    NextToken:
-      name: nextToken
-      in: query
+    RecoveryPointArn:
+      name: recoveryPointArn
+      in: path
+      required: true
       schema:
         type: string
     MaxResults:
@@ -81,14 +82,13 @@ components:
         type: integer
         minimum: 1
         maximum: 1000
-    BackupVaultName:
-      name: backupVaultName
-      in: path
-      required: true
+    NextToken:
+      name: nextToken
+      in: query
       schema:
         type: string
-    RecoveryPointArn:
-      name: recoveryPointArn
+    BackupVaultName:
+      name: backupVaultName
       in: path
       required: true
       schema:
