@@ -1,4 +1,4 @@
-# AWS Backup (aws-backup)
+# AWS Backup
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,59 +66,132 @@
 
 AWS Backup is a fully managed, policy-based data protection service that centralizes and automates backup of data across AWS services including EBS volumes, EC2 instances, RDS databases, DynamoDB tables, EFS file systems, FSx file systems, Storage Gateway volumes, S3, and on-premises data via the AWS Backup gateway. The AWS Backup API allows programmatic management of backup plans, vaults, recovery points, restore jobs, and cross-account, cross-Region copies, authenticated with AWS Signature Version 4 (SigV4).
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aws-backup/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aws-backup/refs/heads/main/apis.yml)
+**Areas:** Backup · Data Protection · Disaster Recovery · AWS · Managed Service · Compliance
 
-## Scope
+## AWS Backup on APIs.io
 
-- **Type:** Index
+Everything profiled for AWS Backup is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aws-backup/](https://apis.io/providers/aws-backup/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (23)
 
-- Backup
-- Data Protection
-- Disaster Recovery
-- AWS
-- Managed Service
-- Compliance
+- [AWS Backup API](https://apis.io/apis/aws-backup/api/) — REST API for centrally configuring and managing AWS Backup including backup plans, backup selections, backup vaults, recovery points, restore jobs,…
+- [AWS Backup Jobs API](https://apis.io/apis/aws-backup/aws-backup-backup-jobs-api/) — The Backup Jobs API from AWS Backup — 2 operation(s) for backup jobs.
+- [AWS Backup Plans API](https://apis.io/apis/aws-backup/aws-backup-backup-plans-api/) — The Backup Plans API from AWS Backup — 2 operation(s) for backup plans.
+- [AWS Backup Selections API](https://apis.io/apis/aws-backup/aws-backup-backup-selections-api/) — The Backup Selections API from AWS Backup — 1 operation(s) for backup selections.
+- [AWS Backup Vaults API](https://apis.io/apis/aws-backup/aws-backup-backup-vaults-api/) — The Backup Vaults API from AWS Backup — 2 operation(s) for backup vaults.
+- [AWS Backup Copy Jobs API](https://apis.io/apis/aws-backup/aws-backup-copy-jobs-api/) — The Copy Jobs API from AWS Backup — 1 operation(s) for copy jobs.
+- [AWS Backup Frameworks API](https://apis.io/apis/aws-backup/aws-backup-frameworks-api/) — The Frameworks API from AWS Backup — 1 operation(s) for frameworks.
+- [AWS Backup Recovery Points API](https://apis.io/apis/aws-backup/aws-backup-recovery-points-api/) — The Recovery Points API from AWS Backup — 2 operation(s) for recovery points.
+- [AWS Backup Report Plans API](https://apis.io/apis/aws-backup/aws-backup-report-plans-api/) — The Report Plans API from AWS Backup — 1 operation(s) for report plans.
+- [AWS Backup Restore Jobs API](https://apis.io/apis/aws-backup/aws-backup-restore-jobs-api/) — The Restore Jobs API from AWS Backup — 1 operation(s) for restore jobs.
+- [AWS Backup Tags API](https://apis.io/apis/aws-backup/aws-backup-tags-api/) — The Tags API from AWS Backup — 1 operation(s) for tags.
+- [AWS Backup Backup Access Policy API](https://apis.io/apis/aws-backup/aws-backup-access-policy-api/) — The Backup Access Policy API from AWS Backup — 1 operation(s) for backup access policy.
+- [AWS Backup Backup Audit API](https://apis.io/apis/aws-backup/aws-backup-audit-api/) — The Backup Audit API from AWS Backup — 9 operation(s) for backup audit.
+- [AWS Backup Backup Backup Access Point API](https://apis.io/apis/aws-backup/aws-backup-backup-access-point-api/) — The Backup Backup Access Point API from AWS Backup — 6 operation(s) for backup backup access point.
+- [AWS Backup Backup Legal Holds API](https://apis.io/apis/aws-backup/aws-backup-legal-holds-api/) — The Backup Legal Holds API from AWS Backup — 2 operation(s) for backup legal holds.
+- [AWS Backup Backup Notification Configuration API](https://apis.io/apis/aws-backup/aws-backup-notification-configuration-api/) — The Backup Notification Configuration API from AWS Backup — 1 operation(s) for backup notification configuration.
+- [AWS Backup Backup Operations API](https://apis.io/apis/aws-backup/aws-backup-operations-api/) — The Backup Operations API from AWS Backup — 19 operation(s) for backup operations.
+- [AWS Backup Backup Resources API](https://apis.io/apis/aws-backup/aws-backup-resources-api/) — The Backup Resources API from AWS Backup — 3 operation(s) for backup resources.
+- [AWS Backup Backup Restore Access Backup Vaults API](https://apis.io/apis/aws-backup/aws-backup-restore-access-backup-vaults-api/) — The Backup Restore Access Backup Vaults API from AWS Backup — 3 operation(s) for backup restore access backup vaults.
+- [AWS Backup Backup Restore Testing API](https://apis.io/apis/aws-backup/aws-backup-restore-testing-api/) — The Backup Restore Testing API from AWS Backup — 3 operation(s) for backup restore testing.
+- [AWS Backup Backup Scan API](https://apis.io/apis/aws-backup/aws-backup-scan-api/) — The Backup Scan API from AWS Backup — 4 operation(s) for backup scan.
+- [AWS Backup Backup Selections API](https://apis.io/apis/aws-backup/aws-backup-selections-api/) — The Backup Selections API from AWS Backup — 3 operation(s) for backup selections.
+- [AWS Backup Backup Tiering Configurations API](https://apis.io/apis/aws-backup/aws-backup-tiering-configurations-api/) — The Backup Tiering Configurations API from AWS Backup — 2 operation(s) for backup tiering configurations.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### AWS Backup API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for centrally configuring and managing AWS Backup including backup plans, backup selections, backup vaults, recovery points, restore jobs, framework reports, audit reports, and the AWS Backup gateway for on-premises virtual machines. All requests are signed with AWS Signature Version 4 (SigV4).
+- [Aws Backup Agentic Access](https://apis.io/agentic-access/aws-backup/aws-backup-agentic-access/)
 
-- **Human URL:** [https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html](https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html)
-- **Base URL:** `https://backup.us-east-1.amazonaws.com`
+#### Collections (11)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Backup
-- Data Protection
-- Disaster Recovery
-- AWS
+- [AWS Backup API](https://apis.io/collections/aws-backup/open-aws-backup/)
+- [AWS Backup Backup Jobs API](https://apis.io/collections/aws-backup/open-aws-backup-backup-jobs-api/)
+- [AWS Backup Backup Jobs Backup Plans API](https://apis.io/collections/aws-backup/open-aws-backup-backup-plans-api/)
+- [AWS Backup Backup Jobs Backup Selections API](https://apis.io/collections/aws-backup/open-aws-backup-backup-selections-api/)
+- [AWS Backup Backup Jobs Backup Vaults API](https://apis.io/collections/aws-backup/open-aws-backup-backup-vaults-api/)
+- [AWS Backup Backup Jobs Copy Jobs API](https://apis.io/collections/aws-backup/open-aws-backup-copy-jobs-api/)
+- [AWS Backup Backup Jobs Frameworks API](https://apis.io/collections/aws-backup/open-aws-backup-frameworks-api/)
+- [AWS Backup Backup Jobs Recovery Points API](https://apis.io/collections/aws-backup/open-aws-backup-recovery-points-api/)
+- [AWS Backup Backup Jobs Report Plans API](https://apis.io/collections/aws-backup/open-aws-backup-report-plans-api/)
+- [AWS Backup Backup Jobs Restore Jobs API](https://apis.io/collections/aws-backup/open-aws-backup-restore-jobs-api/)
+- [AWS Backup Backup Jobs Tags API](https://apis.io/collections/aws-backup/open-aws-backup-tags-api/)
 
-#### Properties
+#### Security (4)
 
-- [Documentation](https://docs.aws.amazon.com/aws-backup/latest/devguide/api-reference.html)
-- [Actions](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_Operations.html)
-- [Authentication](https://docs.aws.amazon.com/aws-backup/latest/devguide/authentication.html)
-- [Endpoints](https://docs.aws.amazon.com/general/latest/gr/backup.html)
-- [Postman Collection](collections/aws-backup.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/aws-backup.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Aws Backup Authentication](https://apis.io/security/aws-backup/aws-backup-authentication/)
+- [Aws Backup Domain Security](https://apis.io/security/aws-backup/aws-backup-domain-security/)
+- [Aws Backup Trust Center](https://apis.io/security/aws-backup/aws-backup-trust-center/)
+- [Aws Backup Vulnerability Disclosure](https://apis.io/security/aws-backup/aws-backup-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://aws.amazon.com/backup/)
 - [Documentation](https://docs.aws.amazon.com/aws-backup/)
 - [Pricing](https://aws.amazon.com/backup/pricing/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.2** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 48.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 31.6 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aws-backup/](https://apis.io/providers/aws-backup/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AWS Backup: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aws-backup/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
